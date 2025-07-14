@@ -8,7 +8,7 @@ A Spring Boot REST API for managing users and soccer players in a football ranki
 - JWT token-based security
 - Password encryption with BCrypt
 - User management (CRUD operations)
-- Player management (CRUS operations)
+- Player management (CRUD operations)
 - Input validation with custom DTOs
 - Global exception handling
 
