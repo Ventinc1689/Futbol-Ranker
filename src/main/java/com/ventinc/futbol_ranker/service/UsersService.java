@@ -42,6 +42,12 @@ public class UsersService {
         return UserMapper.toUserResponseDTO(user);
     }
 
+    public Long getUserIdByUsername(String username) {
+        Users user = userRepo.findByUsername(username)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+        return user.getUserId();
+    }
+
     // Register a new user with an encrypted password
     public void register(UserRegistrationDTO userDTO){
         if (userRepo.existsByUsername(userDTO.getUsername())) {
